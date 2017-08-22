@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_schedule"
+        android:title="@string/schedule"
+        android:icon="@drawable/ic_schedule_black_24dp"/>
+    <item
+        android:id="@+id/menu_schoolfood"
+        android:title="@string/schoolfood"
+        android:icon="@drawable/ic_restaurant_menu_black_24dp" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings_black_24dp" />
+</menu>
