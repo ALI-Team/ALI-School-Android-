@@ -1,5 +1,8 @@
 package am.alite.alischool
 
+import am.alite.alischool.ui.schedule.ScheduleFragment
+import am.alite.alischool.ui.schoolfood.SchoolFoodFragment
+import am.alite.alischool.ui.settings.SettingsFragment
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.FragmentTransaction

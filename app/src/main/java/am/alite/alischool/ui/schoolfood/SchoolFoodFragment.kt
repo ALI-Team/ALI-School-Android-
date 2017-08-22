@@ -1,6 +1,7 @@
-package am.alite.alischool
+package am.alite.alischool.ui.schoolfood
 
 
+import am.alite.alischool.R
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -16,4 +17,4 @@ class SchoolFoodFragment : Fragment() {
         return inflater!!.inflate(R.layout.fragment_school_food, container, false)
     }
 
-}// Required empty public constructor
+}
