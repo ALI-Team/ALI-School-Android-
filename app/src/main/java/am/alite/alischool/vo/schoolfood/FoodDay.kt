@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
  */
 data class FoodDay(@SerializedName("items") val rawAlternatives: List<String>,
                    @SerializedName("week_day") val daynr: Int) {
-    @Transient var alternatives: MutableList<FoodItem>? = mutableListOf()
+    var alternatives: MutableList<FoodItem>? = null
 
     fun parseAlternatives() {
         alternatives = mutableListOf()

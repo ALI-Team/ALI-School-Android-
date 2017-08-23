@@ -2,11 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="am.alite.alischool.SchoolFoodFragment">
+    tools:context="am.alite.alischool.ui.schoolfood.SchoolFoodFragment">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/schoolfood_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/schoolfood" />
-
+        android:layout_height="match_parent" />
 </FrameLayout>
