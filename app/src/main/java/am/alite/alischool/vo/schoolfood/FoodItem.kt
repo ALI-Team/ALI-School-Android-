@@ -12,4 +12,8 @@ data class FoodItem(private val info: String) {
         name = split[0].trim()
         tags = if (split.size == 2) split[1].dropLast(1).split(Regex(", ")) else listOf()
     }
+
+    override fun toString(): String {
+        return "FoodItem(name=\"$name\", tags=$tags)"
+    }
 }

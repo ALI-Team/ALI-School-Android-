@@ -15,30 +15,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottom_nav.setOnNavigationItemSelectedListener { item: MenuItem ->
-            val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-            when (item.itemId) {
-                R.id.menu_schedule -> {
-                    val scheduleFragment = ScheduleFragment()
-                    transaction.replace(R.id.fragment_container, scheduleFragment)
-                    transaction.commit()
-                    true
-                }
-                R.id.menu_schoolfood -> {
-                    val schoolFoodFragment = SchoolFoodFragment()
-                    transaction.replace(R.id.fragment_container, schoolFoodFragment)
-                    transaction.commit()
-                    true
-                }
-                R.id.menu_settings -> {
-                    val settingsFragment = SettingsFragment()
-                    transaction.replace(R.id.fragment_container, settingsFragment)
-                    transaction.commit()
-                    true
-                }
-                else -> {
-                    false
-                }
+        bottom_nav.setOnNavigationItemSelectedListener(navigationListener)
+    }
+
+    val navigationListener: (MenuItem) -> Boolean = { item ->
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        when (item.itemId) {
+            R.id.menu_schedule -> {
+                val scheduleFragment = ScheduleFragment()
+                transaction.replace(R.id.fragment_container, scheduleFragment)
+                transaction.commit()
+                true
+            }
+            R.id.menu_schoolfood -> {
+                val schoolFoodFragment = SchoolFoodFragment()
+                transaction.replace(R.id.fragment_container, schoolFoodFragment)
+                transaction.commit()
+                true
+            }
+            R.id.menu_settings -> {
+                val settingsFragment = SettingsFragment()
+                transaction.replace(R.id.fragment_container, settingsFragment)
+                transaction.commit()
+                true
+            }
+            else -> {
+                false
             }
         }
     }
